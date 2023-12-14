@@ -170,8 +170,8 @@ build_status_module() {
       local show_right_separator="#[fg=$color,bg=$color,nobold,nounderscore,noitalics]$status_right_separator"
 
     else
-      local show_left_separator="#[fg=$color,bg=$thm_bg,nobold,nounderscore,noitalics]$status_left_separator"
-      local show_right_separator="#[fg=$color,bg=$thm_bg,nobold,nounderscore,noitalics]$status_right_separator"
+      local show_left_separator="#[fg=$color,bg=default,nobold,nounderscore,noitalics]$status_left_separator"
+      local show_right_separator="#[fg=$color,bg=default,nobold,nounderscore,noitalics]$status_right_separator"
     fi
 
   fi
@@ -188,7 +188,7 @@ build_status_module() {
 
   if [ $(($index)) -eq 0  ]
   then
-      local show_left_separator="#[fg=$color,bg=$thm_bg,nobold,nounderscore,noitalics]$status_left_separator"
+      local show_left_separator="#[fg=$color,nobold,nounderscore,noitalics]$status_left_separator"
   fi
 
   echo "$show_left_separator$show_icon$show_text$show_right_separator"
